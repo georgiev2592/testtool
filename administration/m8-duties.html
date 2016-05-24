@@ -1,0 +1,146 @@
+<html>
+<head>
+<title>
+Wrecking Ball Team Milestone 8 Duties
+</title>
+</head>
+<body bgcolor=white>
+<p align=center>
+<font size=+2>
+<strong>Wrecking Ball Milestone 8 Duties</strong>
+</font>
+</p>
+<br>
+<br>
+<table align=center border=1 cellpadding=4>
+  <tr>
+    <td valign=top><strong>Team Member</strong>
+    <td valign=top><strong>Milestone 8 Duties</strong>
+ <tr>
+    <td valign=top>Patrick Riordan
+    <td valign=top>
+        I worked on the GradeManager implementation as well as the SelectCourseUI. What's working now is when you click GradeManager a little popup menu comes up called Grade Test. Clicking this will bring up a Select Course UI screen I made with one fake course. Selecting that course and pressing select will print something on stdout. In a previous milestone I did input validation for AddUserUI as well, if there is anything missing or an email doesn't have an @ sign it outputs to stdout. I created spest for GradeManager.java and I created the SelectCourse UI as well as GradeTestUI (grade test flow holder class). I also did some Javadocs for files Ian programmed.
+    <br>
+    <br>
+    The model class with Spect specifications is 
+	<a href="../implementation/source/java/testtool/model/grademanager/GradeManager.java">GradeManager.java</a> (path: /implementation/source/java/testtool/model/grademanager/GradeManager.java).
+	The generated Spest test is in 
+	<a href="../implementation/spest/testtool/model/grademanager/GradeManagerTest.java">GradeManagerTest.java</a> (path: /implementation/spest/testtool/model/grademanager/GradeManagerTest.java).
+ <tr>
+    <td valign=top>Ian Smith-Grove
+    <td valign=top>
+    <p> 
+    Items worked on include:
+    </p>
+    <ul>
+        <li>Reworked AddUserUI to be more in line with model and spec;
+              also added error checking for fields, 'clear' functionality, and a button to close the dialog</li>
+        <li>Reworked ManageQuestionsUI to be more in line with model and spec</li>
+        <ul>
+        	<li>not fully implemented</li>
+                <li>added three options (with buttons): view, edit, and delete</li>
+		<ul>
+			<li>buttons disabled until question listing is selecting</li>
+			<li>with multiple questions selected, only delete is enabled</li>
+		</ul>
+		<li>implemented custom renderer for jtable cells,
+                      in order to display multiple lines for question prompt</li>
+                <li>added search bar and 'advanced search' dialog menu</li>
+        </ul>
+        <li>Reworked AddQuestionUI to be more in line with model and spec, with "full implementation":
+              passes data through model to database</li>
+        <ul>
+        	<li>full database implementation was lost due to svn error</li>
+   	</ul>
+        <li>Set up mysql server and wrote statements to generate tables for the TestTool database</li>
+        <li>Linked the database to the TestTool via the TestToolDB class</li>
+	<ul>
+		<li>much of implementation was lost due to svn error, and had to be redone last minute:
+		      as a result implementation is very barebones</li>
+		<li>model: queries/statements done in TestToolDB, which connects to the mysql server;
+                      all of the *Blank classes act as front end for model classes interracting with db</li>
+	</ul>
+        <li>Fully implemented TestToolMenuBar </li>
+        <ul>
+		<li>separated menu bar out from LoginUI</li>
+		<li>added menu items for Logout, Exit, and Navigate->HomeScreen</li>
+        </ul>
+        <li>Added enums for QuestionType and QuestionDifficulty</li>
+	<ul>
+		<li>correspond to database entries</li>
+                <li>used as type for data objects; also linked to dropdown menus throughout program</li>
+        </ul>
+	<li>Implemented TestToolView, TestToolScreen, and TestToolDialog classes/relationship</li>
+	<ul>
+		<li>TestToolScreen (JPanel) and TestToolDialog (JDialog) are abstract classes that extend the TestToolView interface</li>
+		<li>all major UI screens extend TestToolScreen (such as AdministratorUI, ManageQuestionsUI, ManageTestsUI, etc)</li>
+		<ul>
+			<li>these are added to the current window</li>
+		</ul>
+                <li>smaller UI screens (such as LoginUI, AddQuestionUI, CreateTestUI) extend TestToolDialog</li>
+		<ul>
+			<li>these are displayed as modal dialogs for the current screen</li>
+		</lu>
+		<li>each TestToolView must implement draw() and cleanup() methods</li>
+		<ul>
+			<li>drastically cleans up the code for drawing UI elements (20+ lines to 1)</li>
+			<li>allows navigation around tool to be implemented much more easily</li>
+		</ul>
+	</ul>
+    </ul>
+    <p>     
+    The model class with Spect specifications is 
+	<a href="../implementation/source/java/testtool/model/database/QuestionDB.java">QuestionDB.java</a> (path: /implementation/source/java/testtool/model/database/QuestionDB.java).  
+	The generated Spest test is in 
+	<a href="../implementation/spest/testtool/model/database/QuestionDBTest.java">QuestionDBTest.java</a> (path: /implementation/spest/testtool/model/database/QuestionDBTest.java).
+    </p>
+ <tr>
+    <td valign=top>Joseph Gillum
+    <td valign=top>I worked on the QuestionManager implementation and created spest comments in the QuestionManager.java file.
+ <tr>
+    <td valign=top>Peter Georgiev
+    <td valign=top>
+        I worked on the TestManager implementation. More specifically on Create Test, Edit Test and Delete Test. After the user logs in he/she clicks on the TestManager button from the home screen. The system shows a drop down menu with two options: Create Test, and Manage Tests. If the user clicks on the Create Test option, the system open a new dialog which covers the basic functionality of Creating a test. When the user clicks on the "Create" button, the system make a call to the model and it displays a message in the terminal saying that the CreateTest method has been called. Similarly, if the user click on the Manage Tests option, the system open a new dialog, where the user can search our database for a particular test. If the there is not test that matches user's search criteria the system responds with an alert in the form of a popup. If the system performs a successful search, the user selects one of the tests and clicks on the "Edit" or "Delete" button, the system calls the appropriate model method that displays in the terminal a message saying which method has been called.
+        <br>
+        Note: In order to successfully search for a test, the user have to search for "final exam". 
+    <br>
+    <br>
+    The model class with Spect specifications is 
+	<a href="../implementation/source/java/testtool/model/testmanager/TestManager.java">TestManager.java</a> (path: /implementation/source/java/testtool/model/testmanager/TestManager.java).  
+	The generated Spest test is in 
+	<a href="../implementation/spest/testtool/model/testmanager/TestManagerTest.java">TestManagerTest.java</a> (path: /implementation/spest/testtool/model/testmanager/TestManagerTest.java).
+  <tr>
+    <td valign=top>Robert Mitsuda
+    <td valign=top>
+    I worked on the Login and logout implementation.  Basic login is implemented right now.  The user may input any username and any password and the two values will be stored in two strings that will eventually be used to create an active user to search for in the user database.  Right now, only one screen will appear since there are no user priveleges implemented right now, but eventually, there will be checks at the login to determine what kind of user is logging in and switch to the appropriate screen.  You can see this by running the program and typing anything into the username and password sections.  Then press 'ok' or hit enter and it will display the username and password in the terminal as well as switch the GUI to the menu screen.
+    <br>
+    <br>
+    The model class with Spect specifications is 
+	<a href="../implementation/source/java/testtool/model/administration/Login.java">Login.java</a> (path: /implementation/source/java/testtool/model/administration/Login.java).  
+	The generated Spest test is in 
+	<a href="../implementation/spest/testtool/model/administration/LoginTest.java">LoginTest.java</a> (path: /implementation/spest/testtool/model/administration/LoginTest.java).
+    <br>
+    <br>
+    I also worked on the implementation of adding a course.  After the user clicks on the add course button from the administration button on the main menu, there will be a popup window that the user may use to add a course to the course database.  There are three fields: course name, course number, and department, which the user may fill in with the appropriate information.  After clicking on 'ok' the screen closes and the user is then brought back to the main menu screen.
+    <br>
+    <br>
+    The model class is
+	<a href="../implementation/source/java/testtool/model/database/Course.java">Course.java</a> (path: /implementation/source/java/testtool/model/database/Course.java).  
+
+ <tr>
+    <td valign=top>Tim Jyung
+    <td valign=top>
+	I worked on the CourseOffering implementation. More specifically on Enroll student, drop student, add test and remove test.  The teachers will have the ability to deal with course related items in the course dialog.  There are four buttons on a screen each corresponding to adding a student, dropping a student, adding a test and removing a test.  Each click on any of the buttons will show a message saying you are calling that method.
+    <br>
+    <br>
+    The model class with Spect specifications is 
+	<a href="../implementation/source/java/testtool/model/database/CourseOffering.java">CourseOffering.java</a> (path: /implementation/source/java/testtool/model/database/CourseOffering.java).  
+	The generated Spest test is in 
+	<a href="../implementation/spest/testtool/model/database/CourseOfferingTest.java">CourseOfferingTest.java</a> (path: /implementation/spest/testtool/model/database/CourseOfferingTest.java).
+  <tr>
+
+ 
+</table>
+</body>
+</html>
+

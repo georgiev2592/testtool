@@ -1,0 +1,86 @@
+<html>
+<head>
+<title>
+Peter Georgiev Code Review
+</title>
+</head>
+
+<body bgcolor=white>
+<a name="code review">
+<h4>
+Peter Georgiev Code Review of Tim Yung
+</h4>
+</a>
+
+<strong>Class: DeleteQuestionUI.java</strong>: 
+GUI is working and functional. Maybe not a good idea to ask the user to enter the Question ID in order to delete the question because the user won't know it.
+<br>
+<strong>Method: DeleteQuestionUI.jTextField1ActionPerformed</strong>:
+<ul>
+	<li>
+		Add implementation to the method.
+	<li>
+		Change method name to something meanningful.
+</ul>  
+<br>
+<strong>Method: DeleteQuestionUI.jButton1ActionPerformed</strong>:  
+<ul>
+	<li>
+		Add implementation to the method.
+	<li>
+		Change method name to something meanningful.
+</ul>
+<br>
+<br>
+<br>
+<strong>Class: CourseOffering.java</strong>: 
+Basic implementation of the class looks good. 
+<br>
+Note: CourseOffering.java is part of package testtool.model.database therefore there is no need to import all the classes from that same package. What I mean is, you can delete 
+<br>
+<pre>line 8: import testtool.model.database.*;</pre>
+<br>
+<strong>Method: CourseOffering.enrollStudent</strong>:
+<ul>
+	<li>
+		Basic implementation is done.
+	<li>
+		Add implementation to the method.
+</ul>  
+<br>
+<strong>Method: CourseOffering.dropStudent</strong>:  
+<ul>
+	<li>
+		Basic implementation is done.
+	<li>
+		Add implementation to the method.
+</ul>  
+<br>
+<strong>Method: CourseOffering.addTest</strong>:  
+<ul>
+	<li>
+		Basic implementation is done.
+	<li>
+		Add implementation to the method.
+</ul>  
+<br>
+<strong>Method: CourseOffering.removeTest</strong>:  
+<ul>
+	<li>
+		Basic implementation is done.
+	<li>
+		Add implementation to the method.
+</ul>  
+<br>
+General Note: After the actual implementation is done, it may be a good idea to add a print statement af the end af the method as well for debugging purposes.
+<br>
+Note regarding addTest and removeTest methods: I don't think those method are needed in this class becase TestManager.java takes case of adding and deleting tests.
+<br>
+<br>
+<br>
+
+
+</body>
+</html>
+
+

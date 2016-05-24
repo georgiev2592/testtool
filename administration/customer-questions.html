@@ -1,0 +1,99 @@
+<html>
+<head>
+<title>
+Wrecking Ball Team Customer Questions
+</title>
+</head>
+<body bgcolor=white>
+<p align=center>
+<font size=+2>
+<strong>Wrecking Ball Team Customer Questions</strong>
+</font>
+</p>
+<br>
+<br>
+SESSION #1
+<br>
+<br>
+1. How do we identify individual test takers? Can we somehow use the cal poly account system? Do we need to make our own account system?
+<br>
+<br>
+2. Is this list of end users complete?: (teacher, student, grader, proctor, unregistered user)
+<br>
+<br>
+3. Can multiple people edit the same test? Can tests be shared between teachers?
+<br>
+<br>
+4. Is there a complete list of question types that we are required to support? (ie multiple choice, true false, short-answer, long-answer, etc)
+<br>
+<br>
+5. Is there only one active test at a time (per teacher)?
+<br>
+<br>
+6. What exactly do you mean by programming questions? Do we need to be able to automatically compile and test submitted code? Or is it just text that is checked manually?
+<br>
+<br>
+7. How do you want test results to be saved? Should users have access to results from previously taken tests?
+<br>
+<br>
+8. How are the resulting grades presented? To the user? To the grader? After grading to the teacher? (Do we let the user see their grades and correct answers?)
+<br>
+<br>
+9. Does the teacher have control over the order of questions that populate the test, or is it pulled from the bank randomly?
+<br>
+<br>
+10. It's early, but are there any major limits to our implementation that we need to be aware of? For example we're planning on modeling a database as part of our design. Is that allowed?
+<br>
+<br>
+<br>
+SESSION #2
+<br>
+<br>
+1. Should questions be provided one at a time or can students be presented with multiple questions on a single “page” of the test?
+<br>
+<br>
+2. If multiple questions can be presented at once, do you have any preference for how the questions on each page are organized? Should there be a completely random distribution, or should there be an option to group questions into smaller sections? For example:
+&nbsp;- a section of only true/false questions, multiple choice, etc
+&nbsp;- a section of questions that depend on the same graphic
+<br>
+<br>
+3. Are there specific types of programming questions that you would like us to support? For example, one type of programming question might have a text prompt, and then a text box below to write a complete, compilable program or function. Another type of question may ask students to point out which sections of completed code have bugs or syntax errors, and to describe the specific issues in text. Would you like us to provide support for both of these?
+<br>
+<br>
+4. The spec mentions that users can edit or refine grades if needed. How much control do they have over the grading process exactly? Are users able to completely alter a score regardless of the type of question?
+<br>
+<br>
+5. If questions with incorrect answers are used on a test, and later have their entries edited in the question bank to have the correct answer, should this change automatically cascade to every instance of the question on tests? 
+<update grades automatically, or would changes need to be inputted manually?>
+<br>
+<br>
+6. Can timers be question-specific or are they applied to the entire test?
+<br>
+<br>
+7. Is ‘date when question was entered into the bank’ a meaningful question attribute (something we should keep track of)? What about the author of/user who entered the question?
+<br>
+<br>
+8. Are there any notable absences from our current list of question types?
+Current list:
+&nbps;- True/false
+&nbsp;- Multiple choice
+&nbsp;- Matching
+&nbsp;- Fill-in(-the-blank)
+&nbsp;- Short-answer
+&nbsp;- Long-answer
+&nbsp;- Programming questions (multiple sub-types???)
+<br>
+<br>
+9. Are there any notable absences from our current list of question attributes?
+Current list:
+&nbsp;- type
+&nbsp;- keywords
+&nbsp;- class 
+&nbsp;- difficulty
+&nbsp;- time-to-answer
+&nbsp;- entered/created on
+&nbsp;- entered/created by
+&nbsp;- has-associated-graphic
+&nbsp;&nbsp;graphic → question assignment stored w/ each graphic in database
+<br>
+

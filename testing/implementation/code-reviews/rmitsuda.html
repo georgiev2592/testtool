@@ -1,0 +1,134 @@
+<html>
+<head>
+<title>
+Robert Mitsuda Code Review
+</title>
+</head>
+
+<body bgcolor=white>
+<a name="code review">
+<h4>
+Robert Mitsuda Code Review of Peter Georgiev
+</h4>
+</a>
+
+<strong>Class: CreateTestUI.java</strong>: 
+GUI is good.  Everything is functional.
+<br>
+<strong>Method: CreateTestUI.ButtonCreateActionPerformed</strong>:  
+Method works.  Change method name to something more appropriate.
+<br>
+<strong>Method: CreateTestUI.TextFieldTestNameActionPerformed</strong>:  
+Blank method. can remove.
+<br>
+<br>
+<br>
+
+
+
+
+<strong>Class: DeleteTestUI.java</strong>: 
+GUI is good.  Everything is functional.
+<br>
+<strong>Method: DeleteTestUI.ButtonSearchActionPerformed</strong>:  
+blank method. can remove.
+<br>
+<strong>Method: DeleteTestUI.ButtonDeleteActionPerformed</strong>:  
+method should work once full implementation is achieved.  looks good. but maybe rename to something more accurate.
+<br>
+<br>
+<br>
+
+<strong>Class: EditTestUI.java</strong>: 
+GUI is good.  Everything is functional -- all the methods are blank right now.  Should work once implementation is fully completed.
+<br>
+<br>
+<br>
+
+<strong>Class: ManageTestsUI.java</strong>: 
+GUI is good.  Everything is functional.
+<br>
+<strong>Method: CreateTestUI.ButtonCreateActionPerformed</strong>:  
+Method works.  Change method name to something more appropriate.
+<br>
+<br>
+
+
+<strong>Class: CreateTestUI.java</strong>: 
+GUI is good.  Everything is functional. Rename the methods so that it is easier to understand what they're doing.
+<br>
+<strong>Method: CreateTestUI.SearchFieldActionPerformed</strong>:  
+Method works.  Change method name to something more appropriate.
+<br>
+<strong>Method: CreateTestUI.TestTableMouseClicked</strong>:  
+I don't think you need the last else statement or the middle else if, the else covers both scenarios.
+<br>
+<strong>Method: CreateTestUI.ButtonViewActionPerformed</strong>:  
+Correctly switches panel. 
+<br>
+<strong>Method: CreateTestUI.ButtonDeleteActionPerformed</strong>:  
+This will delete a specified test once full implementation is complete, deleting a dummy test is okay for now.
+<br>
+<strong>Method: CreateTestUI.SearchButtonActionPerformed</strong>:  
+Works perfectly after bug fix.
+<br>
+<strong>Method: CreateTestUI.AdvancedSearchButtonActionPerformed</strong>:  
+Works as intended.
+<br> 
+<br>
+<br>
+
+
+<strong>Class: TestSearchUI.java</strong>: 
+GUI is good.  Everything is functional.  Fix method names.
+<br>
+<strong>Method: TestSearchUI.ButtonClearActionPerformed</strong>:  
+I think you can set the fields to null instead of using blank strings -- not entirely sure.
+<br>
+<strong>Method: TestSearchUI.ButtonCancelActionPerformed</strong>:  
+Print statement not necessary since the window closes.
+<br>
+<strong>Method: TestSearchUI.ButtonSearchActionPerformed</strong>:  
+Method works.
+<br>
+<strong>Method: TestSearchUI.close</strong>:  
+Method works fine.
+<br>
+<br>
+<br>
+
+<strong>Class: Test.java</strong>: 
+Simple class with lots of get-Methods.  All of them work fine. 
+How does the date get initialized in the constructor?
+<br>
+<br>
+<br>
+
+<strong>Class: TestManager.java</strong>: 
+Spest comments look good.  Prints are probably not necessary.
+<br>
+<strong>Method: TestManager.createTest</strong>:  
+Your comment says pass the ID instead of the User.  Just change that and should be good.
+<br>
+<strong>Method: TestManager.editTest</strong>:  
+Not yet implemented.
+<br>
+<strong>Method: TestManager.deleteTest</strong>:  
+Method works. everything good.
+<br>
+<strong>Method: TestManager.search</strong>:  
+Method fine.  However, there are two search methods -- overloading this method might be a bit confusing, but otherwise it's fine.
+<br>
+<strong>Method: TestManager.publishTest</strong>:  
+Not yet implemented.
+<br>
+<strong>Method: TestManager.getActiveTest</strong>:  
+Method works fine.
+<br>
+<br>
+<br>
+
+</body>
+</html>
+
+

@@ -1,0 +1,46 @@
+<html>
+
+<strong>Class QuestionSearchUI</strong>:
+<br>
+ <em>
+     I drew the menu initially. Changes to the code were made to fully implement with model classes and database. 
+     This code was committed with errors, 20 minutes before the deadline to submit the milestone. I do not know who
+     made the changes as multiple people have editted the file tonight (for some reason). It is currently
+     11:57pm and I am still working on fixing the errors. Taking a break to do this because catharsis.
+ </em>
+<br>
+<br>
+<strong>Method QuestionSearchUI.initComponents()<sub>1</sub></strong>:
+<br>
+  <em>
+     This method should be generated entirely from the .form files created by netbeans. Two variable instatiations
+     were added to this file: neither corresponding to our specification/model for the file, and both added errrors.
+     I needed to edit the file outside of netbeans in order to remove the two lines. 
+     <br>
+     The main issue: the person who made the changes created new variables referencing our model and database. In our
+     model, references to the model classes are passed to the view by their constructors. The same is true of the database
+     classes, except that the model classes interract with them directly, and the view classes do not.
+  </em>
+<br>
+<br>
+<strong>Method QuestionSearchUI.ButtonSearchActionPerformed()<sub>2</sub></strong>:
+<br>
+  <em>
+     I was unable to completely fix this method. The following is a list of the errors that I encounterred:
+     <ul>
+         <li>input fields are not checked for errors</li>
+         <li>time is read in as String, rather than int</li>
+         <li>type is read in as int, rather than QuestionType</li>
+         <li>difficulty is read in as int, rather than QuestionDifficulty</li>
+         <li>person attempted to instatiate enums (QuestionType and QuestionDifficulty)
+               rather than grabbing them from the JComboBox via .getSelectedItem()</li>
+         <li>person created a new Course, with course num and dept (two separate attributes) as part of the same String field,
+               and garbage values otherwise</li>
+         <li>same as above, but with User</li>
+         <li>uses keywords to associated question listings in jtable to entries in question database; keywords are not unique,
+             should use question id field</li>
+     </ul>
+  </em>
+<br>
+The remaining methods were unchanged and therefore behave correctly :)
+</html>
